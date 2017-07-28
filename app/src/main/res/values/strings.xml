@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">QuickTemp</string>
+    <string name="temp_value">--°</string>
+    <string name="hum_value">--.-%</string>
+    <string name="press_value">---.-</string>
+    <string name="farenheit_text">F</string>
+    <string name="celsius_text">C</string>
+    <string name="hpa_text">hPa</string>
+    <string name="mbar_text">mbar</string>
+</resources>

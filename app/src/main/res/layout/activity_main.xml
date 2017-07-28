@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    tools:context="com.example.andsorensen.quicktemp.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/outputsContainer"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+        <RelativeLayout
+            android:id="@+id/tempContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/tempOutput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temp_value"
+                android:textSize="90sp" />
+            <Button
+                android:id="@+id/farenheitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tempOutput"
+                android:layout_toEndOf="@id/tempOutput"
+                android:onClick="toggleTempUnits()"
+                android:textSize="20sp"
+                android:text="@string/farenheit_text" />
+            <Button
+                android:id="@+id/celsiusButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tempOutput"
+                android:layout_toEndOf="@id/tempOutput"
+                android:layout_below="@id/farenheitButton"
+                android:onClick="toggleTempUnits()"
+                android:textSize="20sp"
+                android:text="@string/celsius_text" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/pressContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/pressOutput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/press_value"
+                android:textSize="90sp" />
+            <Button
+                android:id="@+id/mbarButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/pressOutput"
+                android:layout_toEndOf="@id/pressOutput"
+                android:onClick="togglePressUnits()"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:text="@string/mbar_text" />
+            <Button
+                android:id="@+id/hpaButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/pressOutput"
+                android:layout_toEndOf="@id/pressOutput"
+                android:layout_below="@id/mbarButton"
+                android:onClick="togglePressUnits()"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:text="@string/hpa_text" />
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
